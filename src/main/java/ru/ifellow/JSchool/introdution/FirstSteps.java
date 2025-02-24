@@ -70,13 +70,13 @@ public class FirstSteps {
             return 0; // Возвращаем 0 для пустого массива
         }
 
-        int proizv = 1; // Инициализируем переменную для хранения произведения
+        int mul = 1; // Инициализируем переменную для хранения произведения
         for (int num : array) { // Проходим по каждому элементу массива
-            proizv *= num; // Умножаем текущий элемент на произведение
+            mul *= num; // Умножаем текущий элемент на произведение
         }
-        return proizv; // Возвращаем произведение
+        return mul; // Возвращаем произведение
     }
-    }
+
 
     public int min(int[] array){
 
@@ -143,7 +143,10 @@ public class FirstSteps {
         for (int num : array) { // Проходим по каждому элементу массива
             if (num == value) { // Если элемент равен value
                 return true; // Возвращаем true
+
             }
+        }
+        return false;
     }
 
     public void reverse(int[]array){
@@ -239,6 +242,7 @@ public class FirstSteps {
     }
 
 }
+
 
 
 //  При решении были использованы материалы из книги "Изучаем JAVA" и JAVARUSH
