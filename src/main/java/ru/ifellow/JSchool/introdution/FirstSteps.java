@@ -24,29 +24,17 @@ public class FirstSteps {
 
     public boolean isEqual (int x, int y){
         //сравнивание двух чисел
-        if (x == y) {
-            return true;
-        } else {
-            return false;
-        }
+        return x == y;
     }
 
-    public boolean isGreater (int x, int y){
+    public boolean isGreater (int x, int y) {
         // проверяем числа, больше первое второго или нет
-        if (x > y) {
-            return true;
-        } else {
-            return false;
-        }
+        return x > y;
     }
 
     public boolean isInsideRect(int xLeft, int yTop, int xRight, int yBottom, int x, int y){
         // Проверяем, лежит ли точка внутри прямоугольника или на его границе
-       if (x >= xLeft && x <= xRight && y >= yTop && y <= yBottom) {
-           return true;
-       } else {
-           return false;
-       }
+        return x >= xLeft && x <= xRight && y >= yTop && y <= yBottom;
     }
 
     public int sum(int[] array){
@@ -62,7 +50,7 @@ public class FirstSteps {
         }
         return summa; // Возвращаем сумму
     }
-    }
+
 
     public int mul(int[] array){
 
@@ -237,12 +225,13 @@ public class FirstSteps {
                 }
             }
             return true; // Если все строки упорядочены, возвращаем true
-        }
+
 
     }
 
 }
 
 
-
 //  При решении были использованы материалы из книги "Изучаем JAVA" и JAVARUSH
+
+
