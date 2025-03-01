@@ -202,20 +202,18 @@ public class FirstSteps {
     }
 
     public int diagonalMax(int[][] matrix){
-            if (matrix.length == 0) { // Проверяем, пуст ли массив
-                return Integer.MIN_VALUE; // Возвращаем минимальное значение для пустого массива
+
+        if (matrix == null || matrix.length == 0) {
+            return Integer.MIN_VALUE;// Проверяем, пуст ли массив
+        }
+        int maximum = Integer.MIN_VALUE;
+        // Проходим по главной диагонали
+        for (int i = 0; i < matrix.length && i < matrix[i].length; i++) { // Если текущий элемент диагонали больше max
+            if (matrix[i][i] > maximum) { // Обновляем max
+                maximum = matrix[i][i];
             }
-
-            int maximum = matrix[0][0]; // Инициализируем переменную для хранения максимального значения
-
-            // Проходим по главной диагонали
-            for (int i = 0; i < matrix.length; i++) {
-                if (matrix[i][i] > maximum) { // Если текущий элемент диагонали больше max
-                    maximum = matrix[i][i]; // Обновляем max
-                }
-            }
-            return maximum; // Возвращаем максимальное значение
-
+        }
+        return maximum;  // Возвращаем максимальное значение
     }
 
     public boolean isSortedDescendant(int[][] matrix){
